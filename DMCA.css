@@ -1,0 +1,19 @@
+.dmca-title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.paragraph {
+    border: solid rgb(233, 143, 162) 5px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    height: auto;
+    align-self: center;
+
+}
+
+.paragraph p {
+    margin: 10px 15px 10px 15px;
+}

@@ -1,0 +1,206 @@
+html {
+    height: 100%;
+}
+
+* {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Koulen','Lato', sans-serif; 
+    font-size: 15px;
+    background-color: rgba(240, 233, 233, 0.973);
+    letter-spacing: 1.5px;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    display: flex;
+    background-color: rgb(233, 143, 162);
+    height: 8%;
+    max-height: 80px; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.container a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin-left: 20px;
+    transition: 0.7s ease;
+    gap: 20px;
+}
+
+.container a:hover {
+    color: white;    
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.odd {
+    background-color: white;
+}
+
+.even {
+    background-color: rgb(243, 240, 240);
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.event-title {
+    font-size: 17px;
+    padding-top: 20px;
+}
+
+thead th {
+    text-align: left;
+    border-bottom: solid 1px;
+}
+
+tbody td a {
+    text-decoration: none;
+    color: rgb(10, 57, 87);
+}
+
+.table-section {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    max-width: 70%;
+    /* width: 1100px; */
+    margin-left: 15%;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+
+.no-match-section {
+    background-color: white;
+    width: 70%;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-top: 2%;
+    display: block;
+}
+
+.no-match-section h2 {
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    background-color: rgb(233, 143, 162);
+    margin-top: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+
+.footer-item {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.footer-item a {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 30px;
+    text-decoration: none;
+}
+
+.footer-item-logo {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.footer-item-logo a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    .team-name-right {
+        color: rgb(10, 57, 87);
+        padding: 0 0 0 5px;
+        margin: 0;
+        font-size: 11px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px); rotate:(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px); rotate:(-45deg);
+    }
+
+    .container{
+        /* position: fixed; */
+        /* left: -100%; */
+        /* top: 70px; */
+        /* gap: 0; */
+        /* flex-direction: column; */
+        background-color: rgb(233, 143, 162);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-links{
+        margin: 16px 0;
+    }
+
+    .container.active {
+        left: 0;
+    }
+
+    .location-row {
+        display: none;
+    }
+}
